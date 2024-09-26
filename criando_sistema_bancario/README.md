@@ -27,15 +27,6 @@ Este é um projeto de Sistema Bancário Simples implementado em Python. Ele perm
 - Saldo: O sistema não permite saques que excedam o saldo disponível.
 
 
-## Estrutura do Projeto :triangular_ruler: :straight_ruler:
-
-- __main__.py: Arquivo principal que contém o menu de navegação e gerencia as operações bancárias.
-- depositar.py: Contém a função que implementa a lógica para depósitos.
-- sacar.py: Contém a função que implementa a lógica para saques.
-- exibir_extrato.py: Função que exibe todas as movimentações (depósitos e saques) e o saldo final.
-- utils.py: Funções auxiliares como limpar_terminal e pausar_execucao para melhorar a experiência do usuário.
-
-
 ## Tecnologias Utilizadas :hammer_and_wrench: :gear: :books:
 
 - Python 3.12.3: Linguagem de programação utilizada para implementar o sistema.
@@ -47,7 +38,7 @@ Este é um projeto de Sistema Bancário Simples implementado em Python. Ele perm
 
 **development:**
 ```bash
-python __main__.py
+python sistema_bancario.py
 ```
 
 
