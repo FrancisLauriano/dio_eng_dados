@@ -38,7 +38,7 @@ Este é um projeto de Sistema Bancário Simples implementado em Python. Ele perm
 
 ## Tecnologias Utilizadas :hammer_and_wrench: :gear: :books:
 
-- Python 3.x: Linguagem de programação utilizada para implementar o sistema.
+- Python 3.12.3: Linguagem de programação utilizada para implementar o sistema.
 - Módulo os: Usado para limpar o terminal entre as operações.
 - Módulo time: Usado para pausar a execução e criar uma experiência de usuário mais interativa.
 
