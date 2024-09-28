@@ -1,37 +1,50 @@
-#__main__.py:
 from time import sleep
 from utils import limpar_terminal, pausar_execucao
 from depositar import depositar
 from sacar import sacar
 from exibir_extrato import exibir_extrato
-
+from cadastrar_usuario import cadastrar_usuario
+from cadastrar_conta import cadastrar_conta
+from listar_contas import listar_contas
 
 def sistema_bancario():
-    saldo = 0
-    limite_saque = 500
-    extrato = []
-    saques_realizados = 0
-    LIMITE_SAQUES_DIARIOS = 3
+    usuarios = []
+    contas = []
 
     while True:
         limpar_terminal()
-        print(f'\n' + ' MENU '.center(20,'#'))
-        print(f'''[1] Depositar
+        print(f'\n' + ' MENU '.center(30,'#'))
+        print('''[1] Depositar
 [2] Sacar
 [3] Extrato
+[4] Cadastrar Usuário
+[5] Cadastrar Conta
+[6] Listar Contas
 [0] Sair''')
-        print(f'\n' + '#' * 20)
+        print(f'\n' + '#' * 30)
 
         try:
             opcao = int(input('OPÇÃO: '))
             limpar_terminal()
 
             if opcao == 1:
-                saldo, extrato = depositar(saldo, extrato)
+                depositar(contas)
+
             elif opcao == 2:
-                saldo, extrato, saques_realizados = sacar(saldo, extrato, saques_realizados, limite_saque, LIMITE_SAQUES_DIARIOS)
+                sacar(contas)
+
             elif opcao == 3:
-                exibir_extrato(saldo, extrato)
+                exibir_extrato(contas)
+
+            elif opcao == 4:
+                cadastrar_usuario(usuarios)
+
+            elif opcao == 5:
+                cadastrar_conta(usuarios, contas)
+
+            elif opcao == 6:
+                listar_contas(contas)
+
             elif opcao == 0:
                 limpar_terminal()
                 print(f'Encerrando o sistema...')
@@ -40,17 +53,19 @@ def sistema_bancario():
                     sleep(0.1)
                 print(f'FINALIZADO')
                 break
+
             else:
-                print(f'Opção Inválida. Tente novamente...')
+                print('Opção Inválida. Tente novamente...')
                 pausar_execucao()
 
         except ValueError:
-            print(f'Opção inválida. Tente novamente.')
+            print('Opção inválida. Tente novamente.')
             pausar_execucao()
-
 
 if __name__ == '__main__':
     sistema_bancario()
+
+
 
 
 

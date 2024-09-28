@@ -1,4 +1,3 @@
-# utils.py:
 from time import sleep
 import os
 
