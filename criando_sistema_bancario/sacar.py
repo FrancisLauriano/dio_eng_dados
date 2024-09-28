@@ -1,4 +1,3 @@
-# sacar.py:
 from utils import pausar_execucao
 
 def sacar(saldo, extrato, saques_realizados, limite_saque, LIMITE_SAQUES_DIARIOS):

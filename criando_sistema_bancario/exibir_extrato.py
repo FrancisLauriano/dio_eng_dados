@@ -1,4 +1,3 @@
-# exibir_extrato.py:
 from utils import pausar_execucao
 
 def exibir_extrato(saldo, extrato):

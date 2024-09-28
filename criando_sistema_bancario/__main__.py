@@ -1,4 +1,3 @@
-#__main__.py:
 from time import sleep
 from utils import limpar_terminal, pausar_execucao
 from depositar import depositar

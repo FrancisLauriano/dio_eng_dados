@@ -1,4 +1,3 @@
-# depositar.py:
 from utils import pausar_execucao
 
 def depositar(saldo, extrato):
