@@ -1,6 +1,6 @@
 # Sistema Bancário
 
-Este é um projeto de Sistema Bancário Simples implementado em Python. Na versão atual (V2), o sistema permite que múltiplos usuários realizem operações bancárias básicas, como depositar, sacar e visualizar o extrato, além de permitir o cadastro de usuários e contas. Cada usuário pode ter mais de uma conta, e as operações são vinculadas a agências e números de contas específicos.
+Este é um projeto de Sistema Bancário Simples implementado em Python usando Programação Orientada a Objetos (POO). Na versão atual (V3), o sistema permite que múltiplos usuários realizem operações bancárias básicas, como depositar, sacar e visualizar o extrato, além de permitir o cadastro de usuários e contas. Cada usuário pode ter mais de uma conta, e as operações são vinculadas a agências e números de contas específicos.
 
 
 ## Funcionalidades :video_game:
@@ -46,15 +46,22 @@ Este é um projeto de Sistema Bancário Simples implementado em Python. Na vers�
 - Múltiplas Contas: Um usuário pode ter mais de uma conta, mas cada conta pertence a somente um usuário.
 
 
+## Diagrama de Classe UML :technologist:
+
+<img src="diagrama_classe_sistema-bancario.png">
+
+... 
+
+
 ## Estrutura do Projeto :triangular_ruler: :straight_ruler:
 
 - __main__.py: Arquivo principal que contém o menu de navegação e gerencia as operações bancárias e cadastros.
-- depositar.py: Contém a função que implementa a lógica para depósitos.
-- sacar.py: Contém a função que implementa a lógica para saques.
-- exibir_extrato.py: Função que exibe todas as movimentações (depósitos e saques) e o saldo final por conta.
-- cadastrar_usuario.py: Função para cadastrar novos usuários.
-- cadastrar_conta.py: Função para cadastrar contas vinculadas a usuários.
-- listar_contas.py: Função para listar todas as contas cadastradas no sistema.
+- transacoes.py: Define as classes de transações, como Deposito e Saque, que gerenciam as operações de registro de depósitos e saques.
+- cliente.py: Define a classe Cliente, que gerencia as informações básicas dos clientes.
+- pessoa_fisica.py: Extende a classe Cliente para representar pessoas físicas, incluindo CPF, nome e data de nascimento.
+- historico.py: Armazena e exibe o histórico de transações, registrando cada operação com data, descrição e saldo.
+- conta.py: Define a classe Conta, que contém as operações básicas de saque e depósito e gerencia o histórico de transações.
+- conta_corrente.py: Extende Conta para incluir regras específicas de limite de saque e número de saques diários.
 - utils.py: Funções auxiliares como limpar_terminal e pausar_execucao para melhorar a experiência do usuário.
 
 
@@ -63,6 +70,7 @@ Este é um projeto de Sistema Bancário Simples implementado em Python. Na vers�
 - Python 3.12.3: Linguagem de programação utilizada para implementar o sistema.
 - Módulo os: Usado para limpar o terminal entre as operações.
 - Módulo time: Usado para pausar a execução e criar uma experiência de usuário mais interativa.
+- Módulo abc: Utilizado para criar a classe abstrata Transacao, que serve como base para Deposito e Saque.
 
 
 ## Executar App :arrow_forward:

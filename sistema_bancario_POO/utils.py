@@ -6,6 +6,5 @@ def limpar_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def pausar_execucao():
-    input('\nPressione ENTER para continuar... ')        
-
+    input('\nPressione ENTER para continuar... ') 
 
