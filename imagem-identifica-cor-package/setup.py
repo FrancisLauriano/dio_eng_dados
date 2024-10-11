@@ -9,8 +9,8 @@ with open("requirements.txt") as f:
 setup(
     name='identificador-img-color',
     version='0.1.0',
-    author="my_name",
-    author_email="my_email",
+    author="Francis Lauriano",
+    author_email="francislauriano@gmail.com",
     description='Pacote para identificar se uma imagem é colorida ou em preto e branco.',
     long_description=page_description,
     long_description_content_type="text/markdown",
